@@ -29,6 +29,6 @@ if len(Acc_name) > 12:
 elif " " in Acc_name:
     print("使用者名稱中不可含有空格")
 elif not Acc_name.isalpha():
-  1223  print("不可輸入數字")
+    print("不可輸入數字")
 else:
     print("您的使用者名稱為:", Acc_name)
