@@ -28,13 +28,13 @@
 # print(fruits)
 
 # set 一種東西只會存在一個
-# fruits_set = {"😊","🤣","😂"}
-# fruits_set.add("❤️") 
-# # fruits_set.add("😂")
-# # for fruit in fruits_set:
-# #     print(fruit, end=" ")
-# if "😂" in fruits_set:
-#     print("有一個笑臉")
+fruits_set = {"😊","🤣","😂"}
+fruits_set.add("❤️") 
+# fruits_set.add("😂")
+# for fruit in fruits_set:
+#     print(fruit, end=" ")
+if "😂" in fruits_set:
+    print("有一個笑臉")
     
 # if "❤️" in fruits_set:
 #     print("有一顆愛心")
@@ -42,8 +42,8 @@
 #     print("沒愛心")
 
 # tuple 元組
-fruit_tuple = ("❤️","🤣","😊","❤️")
+# fruit_tuple = ("❤️","🤣","😊","❤️")
 # result = fruit_tuple.count("❤️")
-# result = fruit_tuple.index("❤️")
-fruit_tuple.add("❤️")
-print(result)
+# # result = fruit_tuple.index("❤️")
+# # fruit_tuple.add("❤️")
+# print(result)
