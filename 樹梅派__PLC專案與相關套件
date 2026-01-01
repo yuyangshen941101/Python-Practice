@@ -1,31 +1,31 @@
-<h1> 登入方式 ssh 遠端登入 </h1>
-<h2> ssh steven901128@steven941101 須在同一個網域當中進行(ssal)，否則會報錯 \n
-若使用其他網域使用 ssh steven901128@192.168.88.129 </h2>
+登入方式 ssh 遠端登入
+ssh steven901128@steven941101 須在同一個網域當中進行(ssal)，否則會報錯
+若使用其他網域使用 ssh steven901128@192.168.88.129
 
-<h1> 網路通訊程式 </h1>
-<h2> 請先確認python版本 python3 --version \n
-建立第一個檔案 nano TCP__server.py \n
-impprt socket \n
+網路通訊程式 
+請先確認python版本 python3 --version
+建立第一個檔案 nano TCP__server.py
+impprt socket
 
-HOST = '0.0.0.0' \n
-PORT = 5000 \n
+HOST = '0.0.0.0'
+PORT = 5000
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) \n
-s.bind((HOST, PORT)) \n
-s.listen(1) \n
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind((HOST, PORT))
+s.listen(1)
 
-print("TCP Server listening on port", PORT) \n
+print("TCP Server listening on port", PORT)
 
-conn, addr = s.accept() \n
-print("Connected by", addr) \n
-while True: \n
-    data = conn.recv(1024) \n
-    if not data: \n
-        break \n
-    print("Received:", data.decode()) \n
-    conn.sendall(b"ACK from Raspberry Pi\n") \n
+conn, addr = s.accept()
+print("Connected by", addr)
+while True:
+    data = conn.recv(1024)
+    if not data:
+        break
+    print("Received:", data.decode())
+    conn.sendall(b"ACK from Raspberry Pi\n")
 
-conn.close() \n
-執行 python3 TCP__server.py \n
-接著開心的power shell 輸入telnet steven941101 5000 \n
-輸入文字後enter 樹梅派那邊會回覆 </h2> 
+conn.close()
+執行 python3 TCP__server.py
+接著開心的power shell 輸入telnet steven941101 5000
+輸入文字後enter 樹梅派那邊會回覆
